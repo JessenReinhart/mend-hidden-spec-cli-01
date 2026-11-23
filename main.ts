@@ -1,3 +1,7 @@
+// Patch applier CLI for hidden-spec-cli. Detects/applies patch formats:
+// auto (detection), json (file-op list), search-replace (<<<<<<< blocks),
+// unified (diff/git hunks), and v4a (*** Begin/Update/Add/Delete File).
+
 import { mkdirSync, readFileSync, rmSync, statSync, writeFileSync, writeSync } from 'node:fs';
 import { dirname } from 'node:path';
 
